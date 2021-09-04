@@ -1,0 +1,12 @@
+.card {
+
+	@include background-opacity($color-white, 0.35);
+	backdrop-filter: blur(4px);
+	border-radius: 5px;
+	padding: $gutter;
+
+	&--dark {
+		@include background-opacity($color-darkblue, 0.35);
+	}
+
+}

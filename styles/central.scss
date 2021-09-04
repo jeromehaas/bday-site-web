@@ -1,9 +1,10 @@
 /* SETTINGS */
 @import './settings/reset.scss';
 @import './settings/variables.scss';
-@import './settings/mixins.scss';
 @import './settings/typography.scss';
 @import './settings/global.scss';
+@import './settings/mixins.scss';
 
 /* COMPONENTS */
 @import './components/page-wrapper.scss';
+@import './components/card.scss';

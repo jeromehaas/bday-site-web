@@ -1,8 +1,7 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import Head from 'next/head';
 
-const PageWrapper = ({ children }) => {
-	
+const Card = ({ children }) => {
+
 	const [ theme, setTheme ] = useState('light');
 	const [ loading, setLoading ] = useState(true);
 
@@ -24,26 +23,20 @@ const PageWrapper = ({ children }) => {
 
 		<Fragment>
 
-			{ loading && (
+		{ loading && (
 			
-				<div className={`page-wrapper page-wrapper--${theme}`}>
- 
- 		    	<Head>
-						<title>Bday Site App</title>
-						<meta name='description' content='Overview of all friends birthdays' />
-     			</Head>
-			
-					{ children }	
-			
-				</div>
-		
-			)}
-			
+			<div className={`card card--${theme}`}>
+				{ children }	
+			</div>
+
+		)}
+
 		</Fragment>
 
 	);
 
 };
 
-export { PageWrapper };
-	
+export {
+	Card
+};

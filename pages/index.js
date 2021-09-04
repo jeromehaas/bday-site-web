@@ -1,16 +1,16 @@
 import Head from 'next/head';
 import { PageWrapper } from 'components/PageWrapper';
+import { Card } from 'components/Card';
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Bday Site App</title>
-        <meta name='description' content='Overview of all friends birthdays' />
-      </Head>
+
 
       <PageWrapper>
-     		hello world
+				<Card>
+					helo
+				</Card>
       </PageWrapper>
 
     </div>
