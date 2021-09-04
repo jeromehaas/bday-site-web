@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { PageWrapper } from 'components/PageWrapper';
 
 export default function Home() {
   return (
@@ -8,9 +9,9 @@ export default function Home() {
         <meta name='description' content='Overview of all friends birthdays' />
       </Head>
 
-      <main>
+      <PageWrapper>
      		hello world
-      </main>
+      </PageWrapper>
 
     </div>
   );
