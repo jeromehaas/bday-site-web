@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 
-const Card = ({ children }) => {
+const Card = ({ children, className='' }) => {
 
 	const [ theme, setTheme ] = useState('light');
 	const [ loading, setLoading ] = useState(true);
@@ -25,7 +25,7 @@ const Card = ({ children }) => {
 
 		{ loading && (
 			
-			<div className={`card card--${theme}`}>
+			<div className={`card card--${theme} ${className}`}>
 				{ children }	
 			</div>
 

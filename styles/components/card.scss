@@ -4,6 +4,11 @@
 	backdrop-filter: blur(4px);
 	border-radius: 5px;
 	padding: $gutter;
+	transition: all 0.3s ease;
+	
+	&:hover {
+		@include background-opacity($color-white, 0.6);
+	}
 
 	&--dark {
 		@include background-opacity($color-darkblue, 0.35);

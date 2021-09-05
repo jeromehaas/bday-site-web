@@ -14,23 +14,34 @@ body {
 	font-size: 16px;
 }
 
-.section {
-	width: 100%;
-	height: auto;
+.bday-card-wrapper {
+	display: grid;
+	grid-gap: $gutter;	
+	grid-template-columns: repeat(4, 1fr);
+
+
 }
 
-.section__inner {
-	width: 100%;
-	max-width: $max-width;
-	overflow: hidden;
-	margin: 0 auto;
-	padding: 0 30px;
-}
-
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
 	
-	.section__inner {
-		padding: 0 20px;
+	.bday-card-wrapper {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+}
+
+@media (max-width: 950px) {
+	
+	.bday-card-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+
+@media (max-width: 650px) {
+	
+	.bday-card-wrapper {
+		grid-template-columns: repeat(1, 1fr);
 	}
 
 }

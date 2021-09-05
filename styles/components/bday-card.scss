@@ -1,0 +1,29 @@
+.bday-card {
+
+	&__date {
+		text-align: center;
+		margin-bottom: $gutter;
+
+		&--day {
+			font-size: 45px;
+		}
+
+		&--month {
+			font-size: 25px;
+		}
+		
+	}
+
+	&__person-info {
+
+		&__td {
+
+			font-size: 20px;
+
+			&:nth-child(1) {
+				width: 100px;
+			}
+		}
+	}
+
+}
