@@ -1,0 +1,72 @@
+.login {
+	background-size: cover;
+	position: absolute;
+	min-height: calc(100vh - (2 * 30px));
+	width: calc(100% - (2 * 30px));
+
+	&__wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	&__dial-wrapper {
+		display: grid;
+		grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+		grid-gap: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__dial-button {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: transparent;
+		border: 2px solid $color-white;
+		color: $color-white;
+		font-size: 25px;
+		transition: all 0.1s ease;
+
+		&:hover, 
+		&:active, 
+		&:focus {
+			border: 2px solid darken($color-white, 25%);
+			color: darken($color-white, 25%);
+		}
+
+		&--reset {
+			background-image: url('/icon/close-white.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 15px;
+		}
+		
+		&--back {
+			background-image: url('/icon/arrow-left-white.svg');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 30px;
+		}
+
+	}
+
+	&__dots-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	&__dot {
+		width: 10px;
+		height: 10px;
+		border: 2px solid $color-white;
+		margin: 5px;
+		border-radius: 50%;
+
+		&--active {
+			background-color: $color-white;
+		}
+	}
+}
+
