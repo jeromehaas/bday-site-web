@@ -9,6 +9,9 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 5px;
+		padding: 30px;
 	}
 	
 	&__dial-wrapper {
@@ -19,20 +22,16 @@
 	}
 
 	&__dial-button {
-		width: 60px;
+		width: 90px;
 		height: 60px;
-		border-radius: 50%;
-		background-color: transparent;
-		border: 2px solid $color-white;
-		color: $color-white;
-		font-size: 25px;
+		border-radius: 5px;
+		color: $color-darkblue;
+		font-size: 30px;
 		transition: all 0.1s ease;
-
-		&:hover, 
-		&:active, 
-		&:focus {
-			border: 2px solid darken($color-white, 25%);
-			color: darken($color-white, 25%);
+		border: none;
+		
+		&:active {
+			transform: scale(0.95);
 		}
 
 		&--reset {
@@ -58,9 +57,9 @@
 	}
 
 	&__dot {
-		width: 10px;
-		height: 10px;
-		border: 2px solid $color-white;
+		width: 15px;
+		height: 15px;
+		border: 2px solid white;
 		margin: 5px;
 		border-radius: 50%;
 

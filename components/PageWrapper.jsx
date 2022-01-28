@@ -1,10 +1,13 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import cookies from 'js-cookie';
 
 const PageWrapper = ({ children }) => {
 	
 	const [ theme, setTheme ] = useState('light');
 	const [ loading, setLoading ] = useState(true);
+	const router = useRouter();
 
 	useEffect(() => {
 
@@ -16,9 +19,16 @@ const PageWrapper = ({ children }) => {
 		if ( currentHour > 20 || currentHour < 6) {
 			setTheme('dark');
 		}
+
+		// CHECK AUTH
+		const cookie = cookies.get('authentificated');
+		if (process.env.NEXT_PUBLIC_COOKIE_KEY !== cookie && process.env.NEXT_PUBLIC_MODE !== 'production' ) {
+			router.push('/login');	
+		}
+
 		setLoading('false');
 		
-	}, []);
+	}, [ router ]);
 
 	return (
 

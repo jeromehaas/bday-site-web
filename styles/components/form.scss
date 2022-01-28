@@ -1,0 +1,49 @@
+.form {
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+
+	&__field {
+		margin-bottom: 15px;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+
+		label {
+			width: 150px;
+			display: inline-block;
+
+		}
+
+		input {
+			border: none;
+			outline: none;
+			width: 100%;
+			border-radius: 5px;
+			padding: 5px 15px;
+			color: $color-darkblue;
+			font-size: 20px;
+
+			&[type="date"]::-webkit-calendar-picker-indicator {
+				display: none;
+				-webkit-appearance: none;
+			}
+		}
+
+	}
+
+	&__button {
+		width: 100%;
+		color: $color-darkblue;
+		border-radius: 5px;
+		border: none;
+		outline: none;
+		padding: 15px;
+		font-size: 20px; 
+	}
+
+}

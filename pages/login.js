@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PageWrapper } from 'components/Pagewrapper';
+import { PageWrapper } from 'components/PageWrapper';
 import cookies from 'js-cookie';
 import { useRouter } from 'next/router';
 
@@ -8,9 +8,9 @@ const Login = () => {
 	const router = useRouter();
 	
 	const [ userInput, setUserInput ] = useState('');
+	
 	useEffect(() => {
 		if (userInput.length === 6) {
-			
 			if  (userInput === process.env.NEXT_PUBLIC_LOGIN_PASSWORD) {
 				cookies.set('authentificated', process.env.NEXT_PUBLIC_COOKIE_KEY, { expires: 7 });
 				router.push('/');
@@ -20,7 +20,7 @@ const Login = () => {
 				}, 1000);
 			}
 		}
-	}, [ userInput ]);
+	}, [ userInput, router ]);
 
 	const updateUserInput = ( number ) => {
 		setUserInput(userInput + number);
@@ -54,12 +54,12 @@ const Login = () => {
 										<button className='login__dial-button login-content__dial-button--back' onClick={ back }></button>
 									</div>
 									<div className='login__dots-wrapper'>
-										<div className={`login-content__dot ${ userInput.length >= 1 ? 'login-content__dot--active' : ''}`}></div>
-										<div className={`login-content__dot ${ userInput.length >= 2 ? 'login-content__dot--active' : ''}`}></div>
-										<div className={`login-content__dot ${ userInput.length >= 3 ? 'login-content__dot--active' : ''}`}></div>
-										<div className={`login-content__dot ${ userInput.length >= 4 ? 'login-content__dot--active' : ''}`}></div>
-										<div className={`login-content__dot ${ userInput.length >= 5 ? 'login-content__dot--active' : ''}`}></div>
-										<div className={`login-content__dot ${ userInput.length >= 6 ? 'login-content__dot--active' : ''}`}></div>
+										<div className={`login__dot ${ userInput.length >= 1 ? 'login__dot--active' : ''}`}></div>
+										<div className={`login__dot ${ userInput.length >= 2 ? 'login__dot--active' : ''}`}></div>
+										<div className={`login__dot ${ userInput.length >= 3 ? 'login__dot--active' : ''}`}></div>
+										<div className={`login__dot ${ userInput.length >= 4 ? 'login__dot--active' : ''}`}></div>
+										<div className={`login__dot ${ userInput.length >= 5 ? 'login__dot--active' : ''}`}></div>
+										<div className={`login__dot ${ userInput.length >= 6 ? 'login__dot--active' : ''}`}></div>
 
 									</div>
 								</div>

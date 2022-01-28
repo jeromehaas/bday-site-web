@@ -20,8 +20,8 @@ const BdayCard = ({ data }) => {
 	return (
 		<Card className='bday-card'>
 				<div className=' bday-card__date'>
-					<p className='bday-card__date--day'>{ data.bday.day }</p>	
-					<p className='bday-card__date--month'>{ months[data.bday.month - 1] }</p>	
+					<p className='bday-card__date--day'>{ data.day }</p>	
+					<p className='bday-card__date--month'>{ months[data.month - 1] }</p>	
 				</div>
 				<div className='bday-card__person-info'>
 					<table className='bday-card__person-info__table'>
@@ -45,10 +45,10 @@ const BdayCard = ({ data }) => {
 						</tr>
 						<tr className='bday-card__person-info__tr'>
 							<td className='bday-card__person-info__td person-info__td--birthyear'>
-								{ data.bday.year && 'Birthyear:' } 
+								{ data.year && 'Birthyear:' } 
 							</td>
 							<td className='bday-card__person-info__td person-info__td--birthyear'>
-									{ data.bday.year }
+									{ data.year }
 							</td>
 						</tr>
 						</tbody>
